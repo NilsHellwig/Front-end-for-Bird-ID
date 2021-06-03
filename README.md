@@ -25,10 +25,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 <br>
 <br>
 <p align="center">
-  <img src="previews/preview1.png" width="20%">
-  <img src="previews/preview2.png" width="20%">
-  <img src="previews/preview3.png" width="20%">
-  <img src="previews/preview4.png" width="20%">
+  <img src="previews/preview1.png" width="33%">
+  <img src="previews/preview2.png" width="33%">
+  <img src="previews/preview3.png" width="33%">
 </center>
 <br>
 <br>
