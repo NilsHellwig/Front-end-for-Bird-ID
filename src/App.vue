@@ -58,18 +58,19 @@ export default {
       if (this.$refs.uploadInput.files[0] !== undefined) {
         this.spinnerActive = true;
         var blobFile = this.$refs.uploadInput.files[0];
-        fetch("http://192.168.178.88:5000/classify", {
+        fetch("http://192.168.178.36:5000/classify", {
           method: "POST",
           body: blobFile,
         }).then((res) => {
           res.json().then((data) => {
-            this.species = data["some_key"];
+            this.species = data["winner"];
             this.speciesSet = true;
-            this.art = data["some_key"];
+            this.art = data["winner"];
             this.spinnerActive = false;
             this.fileName = "(Keine neue Datei hochgeladen)";
             this.runClassify = false;
             let encodedSpeciesGoole = this.art.replace(" ", "+");
+            console.log(data["top2"], data["top3"], data["top4"], data["top5"]);
             this.googleUrl = "https://www.google.de/search?q="+encodedSpeciesGoole+"&source=lnms&tbm=isch"
           });
         });
@@ -121,8 +122,8 @@ h3 {
   border-radius: 6px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
   margin-top: 2em;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
   height: auto;
   text-align: center;
   display: flex;
@@ -142,7 +143,7 @@ button {
   margin: 10px;
   margin-top: 20px;
   margin-bottom: 10px;
-  width: 300px;
+  width: 250px;
   margin-right: auto;
   margin-left: auto;
 }
