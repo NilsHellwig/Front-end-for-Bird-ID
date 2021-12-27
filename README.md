@@ -1,4 +1,4 @@
-# Image Classification Front-end
+# Front-end for Bird ID
 This is a little GUI for image classification tasks. 
 
 ### Compiles and hot-reloads for development
